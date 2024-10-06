@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIT advertisement</title>
+    <style>
+        @keyframes slide {
+            0% { left: 0; transform: scaleX(1); } 
+            50% { left: 75%; transform: scaleX(1); } 
+            51% { transform: scaleX(-1); }
+            100% { left: 0; transform: scaleX(-1); }
+        }
+
+        @keyframes slideTwo {
+            0% { left: 0;} 
+            50% { left: 75%;} 
+            100% { left: 0;}
+        }
+
+        .screen {
+            width: 1000px;
+            height: 700px;
+            position: relative;
+            left: 450px;
+            background-color: lightblue;
+            border: 30px solid gray;
+            border-radius: 5px;
+        }
+        .train {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            top: 0;
+            background-image:url(train.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            animation-duration: 10s;
+            animation-name: slide;
+            animation-iteration-count: infinite;
+            }
+
+        .infoBox{
+            position: absolute;
+            top: 130px;
+            left: 0px;
+            padding-left: 35px;
+            color: #DFC13D;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: xx-large;
+            text-shadow: 2px 2px 8px black;
+
+            animation-duration: 10s;
+            animation-name: slideTwo;
+            animation-iteration-count: infinite;
+        }   
+
+    </style>
+</head>
+<body>
+    <div class="screen">
+        <div class="train"></div>
+        <div class="infoBox">PURDUE CIT</div>
+    </div>  
+</body>
+</html>
